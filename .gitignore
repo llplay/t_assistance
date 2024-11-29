@@ -1,0 +1,18 @@
+# dependencies
+  4 /node_modules
+  5 /.pnp
+  6 .pnp.js
+  7
+  8 # production
+  9 /build
+ 10
+ 11 # misc
+ 12 .DS_Store
+ 13 .env.local
+ 14 .env.development.local
+ 15 .env.test.local
+ 16 .env.production.local
+ 17
+ 18 npm-debug.log*
+ 19 yarn-debug.log*
+ 20 yarn-error.log*
