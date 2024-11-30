@@ -16,5 +16,8 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-user.db
+users.db
 *.docx
+/uploads
+/words
+*.log
