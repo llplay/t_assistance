@@ -1,0 +1,21 @@
+# Web 框架
+flask>=2.3.0
+flask-sqlalchemy>=3.0.0
+flask-cors>=4.0.0
+
+# 认证
+PyJWT>=2.8.0
+werkzeug>=3.0.0
+
+# AI
+google-generativeai>=0.5.0
+
+# Word 文档处理
+python-docx>=1.1.0
+lxml>=4.9.0
+
+# 数据库（SQLite 内置，无需额外安装）
+# SQLAlchemy 通过 flask-sqlalchemy 自动安装
+
+# Windows COM（用于 .doc 转 .docx，仅 Windows + 已安装 Office 环境需要）
+pywin32>=306
