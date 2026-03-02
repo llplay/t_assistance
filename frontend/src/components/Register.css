@@ -1,0 +1,251 @@
+.register-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+.register-box {
+  width: 100%;
+  max-width: 420px;
+  padding: 40px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.register-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.register-header h2 {
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.register-header p {
+  color: #666;
+  font-size: 16px;
+}
+
+.register-form {
+  width: 100%;
+}
+
+.register-form .ant-input-affix-wrapper {
+  border-radius: 8px;
+  border: 1px solid #e8e8e8;
+  transition: all 0.3s;
+}
+
+.register-form .ant-input-affix-wrapper:hover,
+.register-form .ant-input-affix-wrapper:focus {
+  border-color: #1890ff;
+  box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.1);
+}
+
+.register-form .ant-input {
+  padding: 12px;
+  font-size: 16px;
+}
+
+.register-form-button {
+  margin-top: 24px;
+}
+
+.register-form-button .ant-btn {
+  height: 48px;
+  font-size: 16px;
+  border-radius: 8px;
+}
+
+.register-form-footer {
+  margin-top: 24px;
+  text-align: center;
+  color: #666;
+}
+
+.register-form-footer a {
+  color: #1890ff;
+  text-decoration: none;
+  transition: color 0.3s;
+  margin-left: 4px;
+}
+
+.register-form-footer a:hover {
+  color: #40a9ff;
+}
+
+.site-form-item-icon {
+  color: #bfbfbf;
+}
+
+/* 响应式设计 */
+@media (max-width: 576px) {
+  .register-box {
+    margin: 20px;
+    padding: 20px;
+  }
+
+  .register-header h2 {
+    font-size: 24px;
+  }
+
+  .register-header p {
+    font-size: 14px;
+  }
+}
+
+/* 添加输入框focus时的动画效果 */
+.ant-input-affix-wrapper-focused {
+  animation: focusAnimation 0.3s ease-in-out;
+}
+
+@keyframes focusAnimation {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.02);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* 添加按钮hover效果 */
+.register-form-button .ant-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(24, 144, 255, 0.3);
+  transition: all 0.3s;
+}
+
+/* 错误提示样式优化 */
+.ant-form-item-explain-error {
+  font-size: 13px;
+  margin-top: 4px;
+  color: #ff4d4f;
+}
+
+/* 输入框验证失败时的动画 */
+.ant-form-item-has-error .ant-input-affix-wrapper {
+  animation: shakeAnimation 0.5s;
+}
+
+@keyframes shakeAnimation {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  75% {
+    transform: translateX(5px);
+  }
+}
+
+/* 密码强度指示器样式 */
+.ant-form-item-has-success .ant-input-affix-wrapper {
+  border-color: #52c41a;
+}
+
+/* 表单项间距优化 */
+.ant-form-item {
+  margin-bottom: 24px;
+}
+
+/* 添加过渡效果 */
+.register-box {
+  transition: transform 0.3s ease;
+}
+
+.register-box:hover {
+  transform: translateY(-5px);
+}
+
+/* 密码可见性图标样式 */
+.ant-input-password-icon {
+  color: #bfbfbf;
+  transition: all 0.3s;
+}
+
+.ant-input-password-icon:hover {
+  color: #1890ff;
+}
+
+/* 表单加载状态样式 */
+.ant-form-item-children-loading {
+  position: relative;
+}
+
+.ant-form-item-children-loading::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 8px;
+}
+
+/* 优化移动端体验 */
+@media (max-width: 576px) {
+  .register-container {
+    padding: 16px;
+  }
+
+  .register-box {
+    padding: 24px;
+  }
+
+  .register-form .ant-input {
+    font-size: 14px;
+  }
+
+  .register-form-button .ant-btn {
+    height: 40px;
+    font-size: 14px;
+  }
+}
+
+/* 深色模式支持 */
+@media (prefers-color-scheme: dark) {
+  .register-container {
+    background: linear-gradient(135deg, #1f1f1f 0%, #2d3436 100%);
+  }
+
+  .register-box {
+    background: #262626;
+  }
+
+  .register-header h2 {
+    color: #fff;
+  }
+
+  .register-header p {
+    color: #999;
+  }
+
+  .register-form-footer {
+    color: #999;
+  }
+
+  .ant-input-affix-wrapper {
+    background-color: #1f1f1f;
+    border-color: #434343;
+  }
+
+  .ant-input {
+    background-color: #1f1f1f;
+    color: #fff;
+  }
+
+  .ant-input-password-icon {
+    color: #999;
+  }
+}
